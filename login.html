@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login | Top Up Shob</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="login-box">
+
+<h1>🔐 Login</h1>
+
+<form id="loginForm">
+
+<input
+type="email"
+id="email"
+placeholder="Email"
+required>
+
+<input
+type="password"
+id="password"
+placeholder="Password"
+required>
+
+<button type="submit">
+Login
+</button>
+
+</form>
+
+<p>
+নতুন ইউজার?
+<a href="register.html">Register করুন</a>
+</p>
+
+</div>
+
+<script type="module">
+
+import {
+auth,
+signInWithEmailAndPassword
+} from "./firebase.js";
+
+const form=document.getElementById("loginForm");
+
+form.addEventListener("submit",async(e)=>{
+
+e.preventDefault();
+
+const email=document.getElementById("email").value;
+const password=document.getElementById("password").value;
+
+try{
+
+await signInWithEmailAndPassword(auth,email,password);
+
+alert("Login Successful");
+
+window.location="index.html";
+
+}catch(error){
+
+alert(error.message);
+
+}
+
+});
+
+</script>
+
+</body>
+</html>
