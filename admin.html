@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel | Top Up Shob</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.admin{
+padding:40px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+.admin h1{
+text-align:center;
+margin-bottom:30px;
+color:#ff2d2d;
+}
+
+.search-box{
+display:flex;
+gap:10px;
+margin-bottom:20px;
+}
+
+.search-box input{
+flex:1;
+padding:12px;
+border-radius:8px;
+border:none;
+}
+
+.search-box button{
+padding:12px 20px;
+background:#ff2d2d;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+background:#181818;
+}
+
+th,td{
+padding:12px;
+border:1px solid #333;
+text-align:center;
+}
+
+th{
+background:#ff2d2d;
+color:white;
+}
+
+.action-btn{
+padding:8px 12px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+margin:2px;
+}
+
+.complete{
+background:#00c853;
+color:white;
+}
+
+.delete{
+background:#d50000;
+color:white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="admin">
+
+<h1>🛠️ Admin Panel</h1>
+
+<div class="search-box">
+
+<input
+type="text"
+id="search"
+placeholder="UID দিয়ে সার্চ করুন">
+
+<button onclick="searchOrder()">
+
+🔍 Search
+
+</button>
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>UID</th>
+
+<th>Nickname</th>
+
+<th>Package</th>
+
+<th>Status</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="ordersTable">
+
+</tbody>
+
+</table>
+
+  </section>
+  <script type="module">
+
+import {
+db,
+collection,
+getDocs,
+doc,
+updateDoc
+} from "./firebase.js";
+
+const table=document.getElementById("ordersTable");
+
+async function loadOrders(){
+
+table.innerHTML="";
+
+const snapshot=await getDocs(collection(db,"orders"));
+
+snapshot.forEach((item)=>{
+
+const order=item.data();
+
+table.innerHTML+=`
+
+<tr>
+
+<td>${order.uid}</td>
+
+<td>${order.nickname}</td>
+
+<td>${order.package}</td>
+
+<td>${order.status||"Pending"}</td>
+
+<td>
+
+<button class="action-btn complete"
+onclick="completeOrder('${item.id}')">
+
+Complete
+
+</button>
+
+</td>
+
+</tr>
+
+`;
+
+});
+
+}
+
+window.completeOrder=async(id)=>{
+
+await updateDoc(doc(db,"orders",id),{
+
+status:"Completed"
+
+});
+
+alert("Order Completed");
+
+location.reload();
+
+}
+
+window.searchOrder=()=>{
+
+let input=document
+.getElementById("search")
+.value
+.toLowerCase();
+
+let rows=document
+.querySelectorAll("#ordersTable tr");
+
+rows.forEach(row=>{
+
+let uid=row.cells[0].innerText.toLowerCase();
+
+if(uid.includes(input)){
+
+row.style.display="";
+
+}else{
+
+row.style.display="none";
+
+}
+
+});
+
+}
+
+loadOrders();
+
+</script>
+
+</body>
+</html>
