@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register | Top Up Shob</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="login-box">
+
+<h1>📝 Register</h1>
+
+<form id="registerForm">
+
+<input
+type="email"
+id="email"
+placeholder="Email"
+required>
+
+<input
+type="password"
+id="password"
+placeholder="Password (৬+ অক্ষর)"
+required>
+
+<button type="submit">
+Create Account
+</button>
+
+</form>
+
+<p>
+আগে থেকেই অ্যাকাউন্ট আছে?
+<a href="login.html">Login করুন</a>
+</p>
+
+</div>
+
+<script type="module">
+
+import {
+auth,
+createUserWithEmailAndPassword
+} from "./firebase.js";
+
+const form=document.getElementById("registerForm");
+
+form.addEventListener("submit",async(e)=>{
+
+e.preventDefault();
+
+const email=document.getElementById("email").value;
+const password=document.getElementById("password").value;
+
+try{
+
+await createUserWithEmailAndPassword(auth,email,password);
+
+alert("অ্যাকাউন্ট সফলভাবে তৈরি হয়েছে!");
+
+window.location="login.html";
+
+}catch(error){
+
+alert(error.message);
+
+}
+
+});
+
+</script>
+
+</body>
+</html>
