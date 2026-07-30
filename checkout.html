@@ -108,6 +108,53 @@ required>
 
 </form>
 
+  <script type="module">
+
+import {
+db,
+collection,
+addDoc
+} from "./firebase.js";
+
+const form = document.getElementById("orderForm");
+
+form.addEventListener("submit", async (e) => {
+
+  e.preventDefault();
+
+  try {
+
+    await addDoc(collection(db, "orders"), {
+
+      name: document.getElementById("name").value,
+
+      uid: document.getElementById("uid").value,
+
+      nickname: document.getElementById("nickname").value,
+
+      package: document.getElementById("package").value,
+
+      trxid: document.getElementById("trxid").value,
+
+      status: "Pending",
+
+      createdAt: new Date()
+
+    });
+
+    alert("✅ Order সফলভাবে জমা হয়েছে!");
+
+    window.location = "success.html";
+
+  } catch (err) {
+
+    alert("❌ Error: " + err.message);
+
+  }
+
+});
+
+</script>
 </section>
 
 <script src="script.js"></script>
