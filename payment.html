@@ -3,49 +3,73 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Payment - Top Up Shob</title>
+<title>Payment | Top Up Shob</title>
+
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header class="topbar">
-<h2>Top Up Shob</h2>
+<header>
+
+<div class="logo">
+🔥 Top Up Shob
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="checkout.html">Checkout</a>
+</nav>
+
 </header>
 
-<div class="container">
+<section class="payment">
 
-<h2>💳 পেমেন্ট করুন</h2>
+<h1>💳 Payment</h1>
 
-<div class="payment-card">
-<h3>bKash Personal</h3>
+<div class="card">
 
-<p><b>নাম্বার:</b> 01603094891</p>
-<p><b>পরিমাণ:</b> নির্বাচিত প্যাকেজ অনুযায়ী</p>
+<h2>bKash Personal</h2>
 
-<ol>
-<li>bKash App বা *247# থেকে <b>Send Money</b> করুন।</li>
-<li>উপরের নম্বরে টাকা পাঠান।</li>
-<li>পেমেন্ট শেষে Transaction ID কপি করুন।</li>
+<h1 style="color:#ff2d2d;">
+01603094891
+</h1>
+
+<p>
+উপরের bKash নম্বরে <b>Send Money</b> করুন।
+</p>
+
+<hr>
+
+<h3>পেমেন্ট করার ধাপ</h3>
+
+<ol style="text-align:left;max-width:500px;margin:auto;line-height:2;">
+
+<li>bKash App খুলুন।</li>
+
+<li><b>Send Money</b> নির্বাচন করুন।</li>
+
+<li>নম্বর দিন: <b>01603094891</b></li>
+
+<li>আপনার প্যাকেজের সমপরিমাণ টাকা পাঠান।</li>
+
+<li>Transaction ID কপি করুন।</li>
+
+<li>Checkout Page-এ গিয়ে Transaction ID দিয়ে অর্ডার সাবমিট করুন।</li>
+
 </ol>
 
-<form action="https://formsubmit.co/Lolf1819@gmail.com" method="POST">
+<br>
 
-<input
-type="text"
-name="trxid"
-placeholder="Transaction ID লিখুন"
-required>
-
-<button type="submit">
-✅ Verify & Submit
-</button>
-
-</form>
+<a href="checkout.html">
+<button>⬅️ Checkout এ ফিরে যান</button>
+</a>
 
 </div>
 
-</div>
+</section>
+
+<script src="script.js"></script>
 
 </body>
-  </html>
+</html>
