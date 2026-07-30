@@ -1,97 +1,142 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Top Up Shob</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top Up Shob</title>
 
-  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
+
 <body>
 
-<header>
-  <div class="logo">
-    <h1>🔥 Top Up Shob</h1>
-    <p>বিশ্বস্ত গেম টপ-আপ সার্ভিস</p>
-  </div>
+<header class="navbar">
+
+<div class="logo">
+🔥 Top Up Shob
+</div>
+
+<div class="menu">
+
+<a href="#">হোম</a>
+
+<a href="#packages">প্যাকেজ</a>
+
+<a href="#contact">যোগাযোগ</a>
+
+</div>
+
 </header>
 
 <section class="hero">
-  <h2>স্বাগতম Top Up Shob-এ</h2>
-  <p>দ্রুত ও সহজে Membership অর্ডার করুন।</p>
-</section>
 
-<section class="packages">
-  <h2>📦 Membership Packages</h2>
+<div class="hero-text">
 
-  <div class="card">
-    <h3>Weekly Membership</h3>
-    <p>মূল্য: <strong>150 TK</strong></p>
-  </div>
+<h1>বাংলাদেশের বিশ্বস্ত Top Up Service</h1>
 
-  <div class="card">
-    <h3>Monthly Membership</h3>
-    <p>মূল্য: <strong>720 TK</strong></p>
-  </div>
-</section>
+<p>
 
-<section class="payment">
-  <h2>💳 Payment</h2>
-  <p><strong>bKash:</strong> 01603094891</p>
-</section>
+দ্রুত ও নিরাপদে Membership কিনুন
 
-<section class="order">
-<h2>📝 অর্ডার করুন</h2>
-
-<form action="https://formsubmit.co/Lolf1819@gmail.com" method="POST">
-
-<input type="text" name="name" placeholder="আপনার নাম" required>
-
-<input type="text" name="uid" placeholder="Free Fire UID" required>
-
-<input type="tel" name="phone" placeholder="আপনার মোবাইল নম্বর" required>
-
-<select name="package" required>
-<option value="">প্যাকেজ নির্বাচন করুন</option>
-<option>Weekly Membership - 150 TK</option>
-<option>Monthly Membership - 720 TK</option>
-</select>
-
-<h3>💳 Payment</h3>
-
-<p><b>bKash Personal:</b> 01603094891</p>
-
-<p style="color:red;">
-প্রথমে বিকাশে টাকা পাঠান, তারপর নিচে Transaction ID লিখুন।
 </p>
 
-<input
-type="text"
-name="trxid"
-placeholder="bKash Transaction ID"
-required>
+<a href="checkout.html" class="btn">
 
-<button type="submit">
-✅ অর্ডার সাবমিট করুন
-</button>
+এখনই অর্ডার করুন
 
-</form>
-</section>
+</a>
 
-<section class="contact">
-  <h2>📞 যোগাযোগ</h2>
-
-  <p>WhatsApp: 01614774453</p>
-
-  <a href="https://wa.me/8801614774453">
-      WhatsApp এ মেসেজ করুন
-  </a>
+</div>
 
 </section>
 
-<footer>
-  <p>© 2026 Top Up Shob. সকল স্বত্ব সংরক্ষিত।</p>
+<section id="packages">
+
+<h2>Membership</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Weekly Membership</h3>
+
+<h1>150 TK</h1>
+
+<a href="checkout.html">
+
+<button>Buy Now</button>
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>Monthly Membership</h3>
+
+<h1>720 TK</h1>
+
+<a href="checkout.html">
+
+<button>Buy Now</button>
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="why">
+
+<h2>কেন Top Up Shob?</h2>
+
+<div class="features">
+
+<div>
+
+<i class="fa-solid fa-bolt"></i>
+
+<p>দ্রুত ডেলিভারি</p>
+
+</div>
+
+<div>
+
+<i class="fa-solid fa-shield"></i>
+
+<p>নিরাপদ সার্ভিস</p>
+
+</div>
+
+<div>
+
+<i class="fa-solid fa-headset"></i>
+
+<p>২৪/৭ সাপোর্ট</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer id="contact">
+
+<p>📱 WhatsApp : 01614774453</p>
+
+<p>💳 bKash : 01603094891</p>
+
+<p>📧 Email : Lolf1819@gmail.com</p>
+
 </footer>
+
 <script src="script.js"></script>
+
 </body>
   </html>
