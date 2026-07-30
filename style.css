@@ -158,3 +158,33 @@ font-size:30px;
 }
 
     }
+.slider{
+height:420px;
+display:flex;
+justify-content:center;
+align-items:center;
+position:relative;
+overflow:hidden;
+background:linear-gradient(135deg,#a30000,#111);
+}
+
+.slide{
+position:absolute;
+text-align:center;
+opacity:0;
+transition:1s;
+}
+
+.slide.active{
+opacity:1;
+}
+
+.slide h1{
+font-size:42px;
+margin-bottom:15px;
+}
+
+.slide p{
+font-size:20px;
+margin-bottom:20px;
+    }
