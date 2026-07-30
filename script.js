@@ -1,9 +1,21 @@
-document.addEventListener("DOMContentLoaded", () => {
-    alert("🎉 Top Up Shob-এ স্বাগতম!");
+const slides=document.querySelectorAll(".slide");
 
-    const form = document.querySelector("form");
+let current=0;
 
-    form.addEventListener("submit", function () {
-        alert("✅ আপনার অর্ডার গ্রহণ করা হয়েছে। আমরা দ্রুত যোগাযোগ করব।");
-    });
-});
+function showSlide(){
+
+slides.forEach(s=>s.classList.remove("active"));
+
+slides[current].classList.add("active");
+
+current++;
+
+if(current>=slides.length){
+
+current=0;
+
+}
+
+}
+
+setInterval(showSlide,3000);
