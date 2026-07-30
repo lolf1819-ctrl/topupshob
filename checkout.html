@@ -1,44 +1,117 @@
 <!DOCTYPE html>
 <html lang="bn">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Checkout - Top Up Shob</title>
+
+<title>Checkout | Top Up Shob</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<header class="topbar">
-<h2>Top Up Shob</h2>
+<header>
+
+<div class="logo">
+🔥 Top Up Shob
+</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="payment.html">Payment</a>
+
+</nav>
+
 </header>
 
-<div class="container">
+<section class="checkout">
 
-<h2>অর্ডার তথ্য</h2>
+<h1>🛒 Checkout</h1>
 
-<form action="payment.html">
+<form action="https://formsubmit.co/Lolf1819@gmail.com" method="POST">
 
-<label>Player UID</label>
-<input type="text" required>
+<input type="hidden" name="_subject" value="New Top Up Order">
 
-<label>Player Name</label>
-<input type="text" required>
+<input type="hidden" name="_captcha" value="false">
 
-<label>Package</label>
+<label>👤 আপনার নাম</label>
 
-<select required>
+<input
+type="text"
+name="name"
+placeholder="আপনার নাম লিখুন"
+required>
+
+<label>🎮 Free Fire UID</label>
+
+<input
+type="number"
+name="uid"
+placeholder="আপনার UID লিখুন"
+required>
+
+<label>🏷️ Free Fire Nickname</label>
+
+<input
+type="text"
+name="nickname"
+placeholder="আপনার ইন-গেম নাম"
+required>
+<label>💎 প্যাকেজ নির্বাচন করুন</label>
+
+<select name="package" required>
+
+<option value="">প্যাকেজ নির্বাচন করুন</option>
+
+<option>25 Diamond - 20 TK</option>
+<option>50 Diamond - 30 TK</option>
+<option>115 Diamond - 70 TK</option>
+<option>240 Diamond - 150 TK</option>
+<option>355 Diamond - 220 TK</option>
+<option>480 Diamond - 300 TK</option>
+<option>610 Diamond - 380 TK</option>
+<option>850 Diamond - 540 TK</option>
+<option>1240 Diamond - 750 TK</option>
+<option>2530 Diamond - 1570 TK</option>
+<option>5060 Diamond - 3120 TK</option>
 <option>Weekly Membership - 150 TK</option>
-<option>Monthly Membership - 720 TK</option>
+<option>Monthly Membership - 750 TK</option>
+
 </select>
 
+<h3>💳 Payment</h3>
+
+<p><strong>bKash Personal:</strong> 01603094891</p>
+
+<p style="color:#ff2d2d;">
+প্রথমে bKash-এ টাকা পাঠান, তারপর নিচে Transaction ID লিখুন।
+</p>
+
+<label>🧾 Transaction ID</label>
+
+<input
+type="text"
+name="trxid"
+placeholder="Transaction ID লিখুন"
+required>
+
 <button type="submit">
-পরবর্তী ধাপ
+✅ অর্ডার সাবমিট করুন
 </button>
 
 </form>
 
-</div>
+</section>
+
+<script src="script.js"></script>
 
 </body>
-  </html>
+
+</html>
