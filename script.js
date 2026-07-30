@@ -1,21 +1,69 @@
-const slides=document.querySelectorAll(".slide");
+// Top Up Shob V3
 
-let current=0;
+// Banner Slider
 
-function showSlide(){
+const banners = [
+{
+title:"🔥 বাংলাদেশের বিশ্বস্ত Top Up Store",
+text:"Free Fire Diamond ও Membership দ্রুত ডেলিভারি"
+},
+{
+title:"💎 Free Fire Diamond",
+text:"সাশ্রয়ী দামে Diamond কিনুন"
+},
+{
+title:"👑 Weekly & Monthly Membership",
+text:"২৪/৭ অর্ডার গ্রহণ করা হয়"
+}
+];
 
-slides.forEach(s=>s.classList.remove("active"));
+let current = 0;
 
-slides[current].classList.add("active");
+const title = document.querySelector(".banner-text h1");
+const text = document.querySelector(".banner-text p");
+
+function changeBanner(){
 
 current++;
 
-if(current>=slides.length){
+if(current>=banners.length){
 
 current=0;
 
 }
 
+title.innerHTML=banners[current].title;
+
+text.innerHTML=banners[current].text;
+
 }
 
-setInterval(showSlide,3000);
+setInterval(changeBanner,4000);
+
+// Smooth Scroll
+
+document.querySelectorAll("nav a").forEach(link=>{
+
+link.addEventListener("click",function(e){
+
+const target=this.getAttribute("href");
+
+if(target.startsWith("#")){
+
+e.preventDefault();
+
+document.querySelector(target).scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+}
+
+});
+
+});
+
+// Welcome
+
+console.log("Top Up Shob Loaded Successfully");
