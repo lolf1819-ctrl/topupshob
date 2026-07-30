@@ -198,3 +198,30 @@ margin-bottom:30px;
 font-size:30px;
 color:#ff4040;
 }
+.bottom-nav{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:#151515;
+display:flex;
+justify-content:space-around;
+padding:12px 0;
+box-shadow:0 -3px 10px rgba(0,0,0,.4);
+z-index:9999;
+}
+
+.bottom-nav a{
+color:white;
+text-decoration:none;
+text-align:center;
+font-size:14px;
+}
+
+.bottom-nav a:hover{
+color:#ff2d2d;
+}
+
+body{
+padding-bottom:80px;
+    }
