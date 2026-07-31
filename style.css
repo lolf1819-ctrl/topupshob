@@ -819,3 +819,56 @@ if (verifyBtn) {
         width:100%;
     }
    }
+/* ===== Games Section ===== */
+
+.games-section{
+padding:25px;
+}
+
+.games-section h2{
+text-align:center;
+margin-bottom:20px;
+color:#1f57d6;
+font-size:28px;
+}
+
+.games-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+}
+
+.game-box{
+background:#fff;
+border-radius:15px;
+overflow:hidden;
+text-decoration:none;
+color:#222;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+transition:.3s;
+}
+
+.game-box:hover{
+transform:translateY(-5px);
+}
+
+.game-box img{
+width:100%;
+height:140px;
+object-fit:cover;
+}
+
+.game-box h3{
+margin:15px 15px 5px;
+}
+
+.game-box p{
+margin:0 15px 15px;
+color:#666;
+}
+
+@media(max-width:768px){
+.games-grid{
+grid-template-columns:1fr;
+}
+}
