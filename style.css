@@ -563,3 +563,149 @@ line-height:1.8;
 }
 
 }
+/* ========= Premium Checkout ========= */
+
+.checkout-page{
+    max-width:1100px;
+    margin:20px auto;
+    padding:15px;
+}
+
+.game-card{
+    display:flex;
+    align-items:center;
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+    margin-bottom:20px;
+}
+
+.game-img img{
+    width:110px;
+    height:110px;
+    object-fit:cover;
+}
+
+.game-info{
+    padding:15px;
+}
+
+.game-info h2{
+    margin:0;
+    font-size:28px;
+    color:#222;
+}
+
+.game-info p{
+    color:#777;
+    margin-top:8px;
+}
+
+.step-box{
+    background:#fff;
+    border-radius:12px;
+    padding:20px;
+    margin-top:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.step-title{
+    display:flex;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.step-number{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:#1f57d6;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:20px;
+    font-weight:bold;
+    margin-right:15px;
+}
+
+.package-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.package-card{
+    border:2px solid #e5e5e5;
+    border-radius:12px;
+    padding:18px;
+    text-align:center;
+    cursor:pointer;
+    transition:.3s;
+    background:#fff;
+}
+
+.package-card:hover{
+    border-color:#1f57d6;
+    background:#eef4ff;
+    transform:translateY(-3px);
+}
+
+.package-card h3{
+    margin:0;
+    font-size:22px;
+    color:#222;
+}
+
+.package-card p{
+    margin-top:10px;
+    color:#1f57d6;
+    font-weight:bold;
+    font-size:18px;
+}
+
+@media(max-width:768px){
+
+.package-grid{
+    grid-template-columns:1fr;
+}
+
+.game-info h2{
+    font-size:22px;
+}
+
+   }/* Step 2 */
+
+#orderForm{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+#orderForm input{
+padding:15px;
+border:2px solid #ddd;
+border-radius:10px;
+font-size:16px;
+outline:none;
+}
+
+#orderForm input:focus{
+border-color:#1f57d6;
+}
+
+.buy-btn{
+padding:15px;
+background:#1f57d6;
+color:#fff;
+font-size:18px;
+font-weight:bold;
+border:none;
+border-radius:10px;
+cursor:pointer;
+transition:.3s;
+}
+
+.buy-btn:hover{
+background:#164
