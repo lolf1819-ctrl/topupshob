@@ -752,3 +752,70 @@ if (verifyBtn) {
         // পরবর্তীতে এখানে Firebase কোড যোগ হবে
     });
    }
+/* ===== Hero V6 ===== */
+
+.hero-v6{
+    background:linear-gradient(135deg,#0f4cff,#2b7cff);
+    border-radius:20px;
+    margin:20px;
+    padding:50px 20px;
+    color:#fff;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+}
+
+.hero-v6 h1{
+    font-size:42px;
+    margin-bottom:15px;
+    font-weight:800;
+}
+
+.hero-v6 p{
+    font-size:18px;
+    opacity:.95;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.hero-btn{
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:12px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.hero-btn.buy{
+    background:#fff;
+    color:#0f4cff;
+}
+
+.hero-btn.order{
+    background:#111;
+    color:#fff;
+}
+
+.hero-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+
+@media(max-width:768px){
+    .hero-v6 h1{
+        font-size:30px;
+    }
+
+    .hero-v6 p{
+        font-size:15px;
+    }
+
+    .hero-btn{
+        width:100%;
+    }
+   }
