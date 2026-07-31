@@ -31,130 +31,106 @@
 
 </header>
 
-<section class="checkout">
+<section class="checkout-page">
 
-<h1>🛒 Checkout</h1>
+<!-- Game Card -->
 
-<form action="https://formsubmit.co/Lolf1819@gmail.com" method="POST">
+<div class="game-card">
 
-<input type="hidden" name="_subject" value="New Top Up Order">
+<div class="game-img">
+<img src="images/freefire.jpg" alt="Free Fire">
+</div>
 
-<input type="hidden" name="_captcha" value="false">
+<div class="game-info">
+<h2>UID TOPUP (BD)</h2>
+<p>Game / Top Up</p>
+</div>
 
-<label>👤 আপনার নাম</label>
+</div>
 
-<input
-type="text"
-name="name"
-placeholder="আপনার নাম লিখুন"
-required>
+<!-- Step 1 -->
 
-<label>🎮 Free Fire UID</label>
+<div class="step-box">
 
-<input
-type="number"
-name="uid"
-placeholder="আপনার UID লিখুন"
-required>
+<div class="step-title">
 
-<label>🏷️ Free Fire Nickname</label>
+<span class="step-number">1</span>
 
-<input
-type="text"
-name="nickname"
-placeholder="আপনার ইন-গেম নাম"
-required>
-<label>💎 প্যাকেজ নির্বাচন করুন</label>
+<h2>Select Recharge</h2>
 
-<select name="package" required>
+</div>
 
-<option value="">প্যাকেজ নির্বাচন করুন</option>
+<div class="package-grid">
 
-<option>25 Diamond - 20 TK</option>
-<option>50 Diamond - 30 TK</option>
-<option>115 Diamond - 70 TK</option>
-<option>240 Diamond - 150 TK</option>
-<option>355 Diamond - 220 TK</option>
-<option>480 Diamond - 300 TK</option>
-<option>610 Diamond - 380 TK</option>
-<option>850 Diamond - 540 TK</option>
-<option>1240 Diamond - 750 TK</option>
-<option>2530 Diamond - 1570 TK</option>
-<option>5060 Diamond - 3120 TK</option>
-<option>Weekly Membership - 150 TK</option>
-<option>Monthly Membership - 750 TK</option>
+<div class="package-card">
+<h3>Weekly</h3>
+<p>150 TK</p>
+</div>
 
-</select>
+<div class="package-card">
+<h3>Monthly</h3>
+<p>750 TK</p>
+</div>
 
-<h3>💳 Payment</h3>
+<div class="package-card">
+<h3>25 Diamond</h3>
+<p>20 TK</p>
+</div>
 
-<p><strong>bKash Personal:</strong> 01603094891</p>
+<div class="package-card">
+<h3>50 Diamond</h3>
+<p>30 TK</p>
+</div>
 
-<p style="color:#ff2d2d;">
-প্রথমে bKash-এ টাকা পাঠান, তারপর নিচে Transaction ID লিখুন।
-</p>
+<div class="package-card">
+<h3>115 Diamond</h3>
+<p>70 TK</p>
+</div>
 
-<label>🧾 Transaction ID</label>
+<div class="package-card">
+<h3>240 Diamond</h3>
+<p>150 TK</p>
+</div>
 
-<input
-type="text"
-name="trxid"
-placeholder="Transaction ID লিখুন"
-required>
+<div class="package-card">
+<h3>355 Diamond</h3>
+<p>220 TK</p>
+</div>
 
-<button type="submit">
-✅ অর্ডার সাবমিট করুন
-</button>
+<div class="package-card">
+<h3>480 Diamond</h3>
+<p>300 TK</p>
+</div>
 
-</form>
+<div class="package-card">
+<h3>610 Diamond</h3>
+<p>380 TK</p>
+</div>
 
-  <script type="module">
+<div class="package-card">
+<h3>850 Diamond</h3>
+<p>540 TK</p>
+</div>
 
-import {
-db,
-collection,
-addDoc
-} from "./firebase.js";
+<div class="package-card">
+<h3>1240 Diamond</h3>
+<p>750 TK</p>
+</div>
 
-const form = document.getElementById("orderForm");
+<div class="package-card">
+<h3>2530 Diamond</h3>
+<p>1570 TK</p>
+</div>
 
-form.addEventListener("submit", async (e) => {
+<div class="package-card">
+<h3>5060 Diamond</h3>
+<p>3120 TK</p>
+</div>
 
-  e.preventDefault();
+</div>
 
-  try {
+</div>
 
-    await addDoc(collection(db, "orders"), {
-
-      name: document.getElementById("name").value,
-
-      uid: document.getElementById("uid").value,
-
-      nickname: document.getElementById("nickname").value,
-
-      package: document.getElementById("package").value,
-
-      trxid: document.getElementById("trxid").value,
-
-      status: "Pending",
-
-      createdAt: new Date()
-
-    });
-
-    alert("✅ Order সফলভাবে জমা হয়েছে!");
-
-    window.location = "success.html";
-
-  } catch (err) {
-
-    alert("❌ Error: " + err.message);
-
-  }
-
-});
-
-</script>
 </section>
 
 <script src="script.js"></script>
