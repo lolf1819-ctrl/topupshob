@@ -23,49 +23,62 @@
 
 </header>
 
-<section class="payment">
+<section class="payment-page">
 
-<h1>💳 Payment</h1>
+<div class="payment-logo">
+<img src="images/bkash.png" alt="bKash">
+</div>
 
-<div class="card">
+<div class="amount-box">
+<h3>Amount</h3>
+<h1>৳ <span id="amount">0</span></h1>
+</div>
 
-<h2>bKash Personal</h2>
+<div class="payment-card">
 
-<h1 style="color:#ff2d2d;">
-01603094891
-</h1>
+<h2>Transaction ID দিন</h2>
+
+<input
+type="text"
+id="trxid"
+placeholder="Transaction ID লিখুন">
+
+<div class="copy-box">
 
 <p>
-উপরের bKash নম্বরে <b>Send Money</b> করুন।
+bKash Number:
+<b id="bkashNumber">013XXXXXXXX</b>
 </p>
+
+<button onclick="copyNumber()">
+📋 Copy
+</button>
+
+</div>
 
 <hr>
 
-<h3>পেমেন্ট করার ধাপ</h3>
+<ul class="payment-rules">
 
-<ol style="text-align:left;max-width:500px;margin:auto;line-height:2;">
+<li>*247# ডায়াল করুন অথবা bKash App খুলুন।</li>
 
-<li>bKash App খুলুন।</li>
+<li>Send Money নির্বাচন করুন।</li>
 
-<li><b>Send Money</b> নির্বাচন করুন।</li>
+<li>উপরের নম্বরে টাকা পাঠান।</li>
 
-<li>নম্বর দিন: <b>01603094891</b></li>
+<li>সঠিক Amount পাঠান।</li>
 
-<li>আপনার প্যাকেজের সমপরিমাণ টাকা পাঠান।</li>
+<li>Transaction ID লিখে VERIFY চাপুন।</li>
 
-<li>Transaction ID কপি করুন।</li>
-
-<li>Checkout Page-এ গিয়ে Transaction ID দিয়ে অর্ডার সাবমিট করুন।</li>
-
-</ol>
-
-<br>
-
-<a href="checkout.html">
-<button>⬅️ Checkout এ ফিরে যান</button>
-</a>
+</ul>
 
 </div>
+
+<button class="verify-btn">
+
+VERIFY PAYMENT
+
+</button>
 
 </section>
 
