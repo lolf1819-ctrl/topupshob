@@ -91,3 +91,46 @@ function showSlides(){
     setTimeout(showSlides,3000);
 
     }
+/* ===== Payment Page ===== */
+
+// আপনার bKash নম্বর
+const bkashNumber = "01603094891";
+
+// নম্বর দেখানো
+const numberElement = document.getElementById("bkashNumber");
+if (numberElement) {
+    numberElement.innerText = bkashNumber;
+}
+
+// Copy Button
+function copyNumber() {
+    navigator.clipboard.writeText(bkashNumber);
+
+    alert("bKash নম্বর কপি হয়েছে!");
+}
+
+// Amount দেখানো (Checkout থেকে)
+const amount = localStorage.getItem("amount");
+
+if (amount && document.getElementById("amount")) {
+    document.getElementById("amount").innerText = amount;
+}
+
+// Verify Button
+const verifyBtn = document.querySelector(".verify-btn");
+
+if (verifyBtn) {
+    verifyBtn.addEventListener("click", function () {
+
+        let trx = document.getElementById("trxid").value.trim();
+
+        if (trx == "") {
+            alert("Transaction ID লিখুন");
+            return;
+        }
+
+        alert("Payment Verify Request Submitted ✅");
+
+        // পরবর্তীতে এখানে Firebase কোড যোগ হবে
+    });
+}
